@@ -14,6 +14,10 @@ angular.module('starter.controllers', [])
           vORn: $scope.account.vORn,
         });
       }
+      else
+      {
+        alert("This account already Exists");
+      }
     }
   
 })
