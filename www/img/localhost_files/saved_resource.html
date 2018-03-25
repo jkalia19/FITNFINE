@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:4400/#/tab/dash -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><script>if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document);}</script>
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="http://localhost:4400/manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="./ionic.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="./ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="./cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="./app.js"></script>
+    <script src="./controllers.js"></script>
+    <script src="./services.js"></script>
+  </head>
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable nav-bar-container" nav-bar-transition="ios">
+      <ion-nav-back-button class="hide"></ion-nav-back-button>
+    <div class="nav-bar-block" nav-bar="cached"><ion-header-bar class="bar-stable bar bar-header" align-title="center"><button ng-click="$ionicGoBack()" class="button back-button hide buttons button-clear header-item"><i class="icon ion-ios-arrow-back"></i> 
+      <span class="back-text"><span class="default-title">Back</span><span class="previous-title hide"></span></span></button><div class="title title-center header-item"></div></ion-header-bar></div><div class="nav-bar-block" nav-bar="active"><ion-header-bar class="bar-stable bar bar-header" align-title="center"><button ng-click="$ionicGoBack()" class="button back-button hide buttons button-clear header-item"><i class="icon ion-ios-arrow-back"></i> 
+      <span class="back-text"><span class="default-title">Back</span><span class="previous-title hide"></span></span></button><div class="title title-center header-item"></div></ion-header-bar></div></ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe=""><ion-tabs class="tabs-icon-top tabs-color-active-positive pane tabs-bottom tabs-standard" abstract="true" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);"><div class="tab-nav tabs">
+
+  <!-- Dashboard Tab -->
+  <ion-tab ion-off="ion-ios-pulse-outline" icon-on="ion-ios-pulse-strong" href="#/tab/dash"></ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab icon-off="ion-ios-body-outline" icon-on="ion-ios-body" href="#/tab/foods"></ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account"></ion-tab>
+
+<a ng-class="{&#39;has-badge&#39;:badge, &#39;tab-hidden&#39;:isHidden(), &#39;tab-item-active&#39;: isTabActive()}" ng-disabled="disabled()" class="tab-item tab-item-active" icon-on="ion-ios-pulse-strong" style=""><!-- ngIf: badge --><!-- ngIf: getIcon() --><i class="icon ion-ios-pulse-strong" ng-if="getIcon()" style=""></i><!-- end ngIf: getIcon() --><span class="tab-title ng-binding" ng-bind-html="title">Status</span></a><a ng-class="{&#39;has-badge&#39;:badge, &#39;tab-hidden&#39;:isHidden(), &#39;tab-item-active&#39;: isTabActive()}" ng-disabled="disabled()" class="tab-item" icon-on="ion-ios-body" icon-off="ion-ios-body-outline"><!-- ngIf: badge --><!-- ngIf: getIcon() --><i class="icon ion-ios-body-outline" ng-if="getIcon()" style=""></i><!-- end ngIf: getIcon() --><span class="tab-title ng-binding" ng-bind-html="title">Foods</span></a><a ng-class="{&#39;has-badge&#39;:badge, &#39;tab-hidden&#39;:isHidden(), &#39;tab-item-active&#39;: isTabActive()}" ng-disabled="disabled()" class="tab-item" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline"><!-- ngIf: badge --><!-- ngIf: getIcon() --><i class="icon ion-ios-gear-outline" ng-if="getIcon()" style=""></i><!-- end ngIf: getIcon() --><span class="tab-title ng-binding" ng-bind-html="title">Account</span></a></div><ion-nav-view name="tab-dash" class="view-container tab-content" nav-view="active" nav-view-transition="ios"><ion-view view-title="FIT &#39;n FINE" class="pane" state="tab.dash" nav-view="stage" style="opacity: 1; transform: translate3d(0%, 0px, 0px);">
+  <ion-content class="padding scroll-content ionic-scroll" ng-app="starter"><div class="scroll">
+
+      <div class="header text-center">
+       <h1 class="Title Heading">
+        Welcome to 
+                  <em>FIT N FINE</em>
+       </h1>
+      </div>
+        <div class="subheader text-center">
+          <h4 class="Title">
+            Please Select and FILL The Below Options
+          </h4>
+        </div>
+        <div>
+        <div class="list">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Name</span>
+            <input type="text" placeholder="John" ng-model="account.name" class="ng-pristine ng-untouched ng-valid">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Weight</span>
+            <input type="text" placeholder="in Kgs" ng-model="account.weight" class="ng-pristine ng-untouched ng-valid">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Email</span>
+            <input type="text" placeholder="john@suhr.com" ng-model="account.email" class="ng-pristine ng-untouched ng-valid">
+          </label>
+        </div>
+        <ion-list radio-group=""><div class="list">
+          <ion-item class="item">
+            <span>
+            <ion-label> Vegetarian </ion-label>
+            <label class="item item-radio" value="Yes" style="height:45px;" ng-model="account.vORn"><input type="radio" name="radio-group" value="Yes" ng-model="account.vORn" class="ng-pristine ng-untouched ng-valid"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""></div><i class="radio-icon disable-pointer-events icon ion-checkmark"></i></div></label>
+            <label class="item item-radio" value="No" style="height:45px;" ng-model="account.vORn"><input type="radio" name="radio-group" value="No" ng-model="account.vORn" class="ng-pristine ng-untouched ng-valid"><div class="radio-content"><div class="item-content disable-pointer-events" ng-transclude=""></div><i class="radio-icon disable-pointer-events icon ion-checkmark"></i></div></label></span>
+          </ion-item>    
+        </div></ion-list>
+        <button class="button button-royal" ng-click="addaccount()">
+            Save
+        </button>
+      </div>
+      
+  </div></ion-content>
+
+</ion-view></ion-nav-view></ion-tabs></ion-nav-view>
+  
+
+</body></html>

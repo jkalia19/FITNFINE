@@ -1,0 +1,28 @@
+.Heading
+{
+	margin-left: 0.7em;
+	font-weight: bolder;
+}
+.centers
+{
+	text-align: center;
+}
+div
+{
+	display: block;
+}
+.maroon
+{
+	color: #85144B;
+}
+.orange
+{
+	background-color: #FF851B;
+}
+.text-down
+{
+	position: absolute;
+	top:680px;
+	left: 230px;
+	
+}
